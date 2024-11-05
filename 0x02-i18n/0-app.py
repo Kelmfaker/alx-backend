@@ -10,3 +10,8 @@ function index
 def index():
 
     return render_template('0-index.html')
+
+
+# debugging
+if __name__ == '__main__':
+    app.run(debug=True)
