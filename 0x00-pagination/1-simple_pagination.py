@@ -5,9 +5,7 @@ from typing import List
 
 def index_range(page: int, page_size: int) -> tuple:
     """
-    Return a tuple of size two containing a start index and an end index
-    corresponding to the range of indexes to return in a list for those
-    particular pagination parameters.
+    Return a tuple of size two containing a start index and an end
     """
     start_index = (page - 1) * page_size
     end_index = page * page_size
@@ -45,9 +43,9 @@ class Server:
             List[List]: The list of rows for the specified page.
         """
         assert isinstance(page, int) and page > 0
-        "Page must be a positive integer."
+        # "Page must be a positive integer."
         assert isinstance(page_size, int) and page_size > 0
-        "Page size must be a positive integer."
+        # "Page size must be a positive integer."
 
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()
